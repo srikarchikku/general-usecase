@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Happiee 25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"><div class="petals" id="petals"></div></div>
+
+  <!-- Date lock -->
+  <section id="lock" class="lock">
+    <div class="lock-card">
+      <div class="lock-heart">&#9825;</div>
+      <h1>Happiee 25 <span class="hh">&#9829;</span></h1>
+      <div class="lock-name">Gayathri</div>
+      <p class="lock-sub">Before you open your little book&hellip;</p>
+      <p class="lock-q" id="lockQ"></p>
+      <form id="lockForm" autocomplete="off">
+        <input type="text" id="lockDate" required placeholder="Type your answer&hellip;" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <button type="submit">Open &#9825;</button>
+      </form>
+      <p class="lock-hint" id="lockHint"></p>
+      <p class="lock-err" id="lockErr"></p>
+      <p class="lock-tip">&#9825; Once it opens, tap the right side of a page to turn to the next one, and the left side to go back (swipe works on a phone). &#9825;</p>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <main id="stage" class="stage hidden">
+    <div id="book" class="book"></div>
+    <div class="controls">
+      <span id="indicator" class="indicator"></span>
+      <button id="muteBtn" class="ctl music" aria-label="Music on/off">&#9835;</button>
+    </div>
+  </main>
+
+  <!-- Surprise overlay -->
+  <div id="surprise" class="surprise hidden">
+    <div class="s-card">
+      <button id="sClose" class="s-close" aria-label="Close">&times;</button>
+      <div class="s-title" id="sTitle"></div>
+      <div class="s-media" id="sMedia"></div>
+      <p class="s-text" id="sText"></p>
+    </div>
+  </div>
+
+  <!-- Video pop-up -->
+  <div id="vbox" class="surprise hidden">
+    <div class="s-card v-card">
+      <button id="vClose" class="s-close" aria-label="Close">&times;</button>
+      <video id="vVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <audio id="audio" loop preload="auto"></audio>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
